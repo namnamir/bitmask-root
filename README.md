@@ -1,2 +1,3 @@
 # bitmask-root
-This is a readme file!
+Administrative service for bitmask client.
+
