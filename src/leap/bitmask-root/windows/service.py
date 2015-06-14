@@ -8,8 +8,8 @@ import time
 
 
 class AppServerSvc(win32serviceutil.ServiceFramework):
-    _svc_name_ = "BitmaskRoot"
-    _svc_display_name_ = "BitmaskRoot"
+    _svc_name_ = "bitmask-root"
+    _svc_display_name_ = "bitmask-root"
     _Stoped = False
 
     def __init__(self, args):
