@@ -1,5 +1,5 @@
-import src.leap.bitmask.windows.firewall
 import unittest
+
 from src.leap.bitmask.windows.firewall import Firewall
 
 
