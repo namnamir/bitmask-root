@@ -1,6 +1,6 @@
 import unittest
 
-from src.leap.bitmask.windows.firewall import Firewall
+from windows import Firewall
 
 
 class TestStringMethods(unittest.TestCase):

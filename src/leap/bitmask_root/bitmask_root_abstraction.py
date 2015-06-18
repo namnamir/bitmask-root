@@ -1,4 +1,4 @@
-class BitmaskRoot():
+class BitmaskRoot:
     def __init__(self):
         pass
 
