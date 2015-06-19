@@ -7,11 +7,9 @@ class Firewall:
 
     def stop(self):
         subprocess.call(['netsh', 'advfirewall', 'set', 'allprofiles', 'state', 'off'])
-        return self.get_firewall_status()
 
     def start(self):
         subprocess.call(['netsh', 'advfirewall', 'set', 'allprofiles', 'state', 'on'])
-        return self.get_firewall_status()
 
     def get_firewall_status(self):
         cmd = subprocess.Popen(['netsh', 'advfirewall', 'show', 'currentprofile'], stdout=subprocess.PIPE)

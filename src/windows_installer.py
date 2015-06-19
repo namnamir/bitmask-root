@@ -3,13 +3,14 @@ import win32event
 import socket
 import win32serviceutil
 import servicemanager
-from windows.windows_implementation import BitmaskRootWindows
+from leap.bitmask_root.windows.windows_implementation import *
+
 
 
 class AppServerSvc(win32serviceutil.ServiceFramework):
     _svc_name_ = "bitmask-root"
     _svc_display_name_ = "bitmask-root"
-    _server = BitmaskRootWindows("tcp://127.0.0.1:8080")
+    _server = BitmaskRootWindows("tcp://%s:%s" % (host, port))
     _stoped = False
 
     def __init__(self, args):
