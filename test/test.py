@@ -3,7 +3,6 @@ from jsonrpc2_zeromq import RPCClient
 from leap.bitmask_root.windows.firewall import Firewall
 from leap.bitmask_root.windows.windows_implementation import *
 
-
 class TestStringMethods(unittest.TestCase):
     def test_get_firewall_status(self):
         firewall = Firewall()
@@ -20,7 +19,6 @@ class TestStringMethods(unittest.TestCase):
         client.stop_firewall()
         firewall = Firewall()
         self.assertAlmostEqual(firewall.get_firewall_status(), False)
-
 
 if __name__ == '__main__':
     unittest.main()

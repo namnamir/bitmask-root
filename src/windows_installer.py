@@ -5,11 +5,9 @@ import win32serviceutil
 import servicemanager
 from leap.bitmask_root.windows.windows_implementation import *
 
-
-
 class AppServerSvc(win32serviceutil.ServiceFramework):
     _svc_name_ = "bitmask-root"
-    _svc_display_name_ = "bitmask-root"
+    _svc_display_name_ = "Bitmask Root"
     _server = BitmaskRootWindows("tcp://%s:%s" % (host, port))
     _stoped = False
 
