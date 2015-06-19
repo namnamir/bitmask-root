@@ -1,6 +1,7 @@
 from jsonrpc2_zeromq import RPCServer
-from firewall import Firewall
+from windows.firewall import Firewall
 from bitmask_root_abstraction import BitmaskRoot
+
 
 class BitmaskRootWindows(RPCServer,BitmaskRoot):
     def handle_stop_ovpn_method(self):

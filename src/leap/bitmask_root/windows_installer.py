@@ -1,7 +1,6 @@
 import win32service
 import win32event
 import socket
-import time
 import win32serviceutil
 import servicemanager
 from windows.windows_implementation import BitmaskRootWindows
