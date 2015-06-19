@@ -1,15 +1,15 @@
 class BitmaskRoot:
-    def __init__(self):
-        pass
-
-    def start_firewall(self):
+    def handle_start_firewall_method(self):
         raise NotImplementedError()
 
-    def stop_firewall(self):
+    def handle_stop_firewall_method(self):
         raise NotImplementedError()
 
-    def start_ovpn(self):
+    def handle_start_ovpn_method(self):
         raise NotImplementedError()
 
-    def stop_opvn(self):
+    def handle_stop_ovpn_method(self):
+        raise NotImplementedError()
+
+    def handle_print_method(self):
         raise NotImplementedError()

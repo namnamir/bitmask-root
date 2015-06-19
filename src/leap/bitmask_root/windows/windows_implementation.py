@@ -1,9 +1,17 @@
 from jsonrpc2_zeromq import RPCServer
-from leap.bitmask_root.bitmask_root_abstraction import BitmaskRoot
-from leap.bitmask_root.windows.firewall import Firewall
+from firewall import Firewall
+from bitmask_root_abstraction import BitmaskRoot
 
+class BitmaskRootWindows(RPCServer,BitmaskRoot):
+    def handle_stop_ovpn_method(self):
+        pass
 
-class BitmaskRootWindows(BitmaskRoot, RPCServer):
+    def handle_start_ovpn_method(self):
+        pass
+
+    def handle_print_ovpn_method(self):
+        print "Hello"
+
     def handle_start_firewall_method(self):
         firewall = Firewall()
         firewall.start()
@@ -12,6 +20,5 @@ class BitmaskRootWindows(BitmaskRoot, RPCServer):
         firewall = Firewall()
         firewall.stop()
 
-    def handle_start_ovpn_method(self): pass
 
-    def handle_stop_opvn_method(self): pass
+if __name__ == '__main__': pass

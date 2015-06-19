@@ -1,7 +1,5 @@
 import unittest
-
-from windows import Firewall
-
+from src.leap.bitmask_root.windows.firewall import Firewall
 
 class TestStringMethods(unittest.TestCase):
     def test_get_firewall_status(self):
