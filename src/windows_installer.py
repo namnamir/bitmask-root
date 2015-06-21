@@ -4,6 +4,8 @@ import socket
 import win32serviceutil
 import servicemanager
 from leap.bitmask_root.windows.windows_implementation import *
+import sys
+
 
 class AppServerSvc(win32serviceutil.ServiceFramework):
     _svc_name_ = "bitmask-root"
@@ -37,4 +39,4 @@ class AppServerSvc(win32serviceutil.ServiceFramework):
 
 
 if __name__ == '__main__':
-    win32serviceutil.HandleCommandLine(AppServerSvc)
+        win32serviceutil.HandleCommandLine(AppServerSvc)

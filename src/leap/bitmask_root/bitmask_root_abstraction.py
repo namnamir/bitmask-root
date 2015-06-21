@@ -11,3 +11,4 @@ class BitmaskRoot:
     def handle_stop_ovpn_method(self):
         raise NotImplementedError()
 
+
