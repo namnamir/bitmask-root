@@ -1,7 +1,7 @@
 import unittest
 from jsonrpc2_zeromq import RPCClient
 from os.path import abspath, dirname
-from src.leap.bitmask_root.windows.firewall import Firewall
+from src.leap.bitmask_root.windows.firewall import *
 from src.leap.bitmask_root.windows.windows_implementation import *
 from src.leap.bitmask_root.windows.tools import tools
 from src.leap.bitmask_root.windows.openvpn import *
