@@ -3,7 +3,7 @@ import win32event
 import socket
 import win32serviceutil
 import servicemanager
-from leap.bitmask_root.windows.windows_implementation import *
+from src.leap.bitmask_root.windows.windows_implementation import *
 import sys
 
 
