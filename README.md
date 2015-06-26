@@ -20,10 +20,12 @@ windows_installer.py -start
 # Usage
 bitmask-root has four functionality that you can call them as a rpcclient, functionalities that bitmask-root supports are :
 <br />
-1- start_firewall<br />
-2- stop_firewall<br />
-3- start_openvpn<br />
-4- stop_openvpn<br />
+<ol>
+<li>start_firewall</li>
+<li>stop_firewall</li>
+<li>start_openvpn</li>
+<li>stop_openvpn</li>
+</ol>
 
 # Example
 ```code
