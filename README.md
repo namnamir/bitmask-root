@@ -18,7 +18,7 @@ windows_installer.py -start
 ```
 
 # Usage
-bitmask-root has four functionality that you can call them as a rpcclient, functionalities that bitmask-root supports are :
+bitmask-root has four functionality that you can call them as a rpc client, these functionalities that bitmask-root supports are :
 <br />
 <ul>
 <li>start_firewall</li>
