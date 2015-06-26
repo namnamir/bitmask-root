@@ -1,4 +1,5 @@
 import _winreg as reg
+import os
 import psutil as psutil
 
 
@@ -35,3 +36,7 @@ class tools:
             except WindowsError:
                 pass
         return False
+
+    @staticmethod
+    def get_bitmask_home():
+        return os.getenv('BITMASK_HOME', "")
