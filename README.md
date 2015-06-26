@@ -4,7 +4,7 @@ Administrative service for bitmask client.
 # Installation
 1- Install TAP driver for windows in third-party\tap-windows directory.<br />
 2- Copy .ovpn config file to third-party\openvpn.<br />
-3- Add an environment variable named BITMASK_HOME and save bitmask-root directory as value.<br />
+3- Add an environment variable named BITMASK_HOME and save bitmask-root directory as its value.<br />
 4- Install windows service by following command (Run command prompt as administrator): <br />
 
 ```batch
