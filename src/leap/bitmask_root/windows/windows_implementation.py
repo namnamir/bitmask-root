@@ -10,7 +10,7 @@ class BitmaskRootWindows(RPCServer, BitmaskRoot):
     def handle_stop_ovpn_method(self):
         ovpn = OpenVPNLauncher()
         ovpn.terminate()
-        pass
+
 
     def handle_start_ovpn_method(self,cfgfile,logfile):
         ovpn = OpenVPNLauncher()
