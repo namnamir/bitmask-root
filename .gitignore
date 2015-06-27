@@ -1,2 +1,4 @@
 .idea
 *.ovpn
+dist
+build
