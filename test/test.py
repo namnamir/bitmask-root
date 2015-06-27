@@ -22,8 +22,8 @@ class TestStringMethods(unittest.TestCase):
 
     def test_start_ovpn(self):
         client = RPCClient("tcp://%s:%s" % (host, port))
-        client.start_ovpn('sample.ovpn', 'log.txt')
-        pass
+        self.proc = psutil.Process(client.start_ovpn('sample.ovpn', 'log.txt'))
+        self.assertAlmostEqual(self.proc.is_running(), True)
 
     def test_stop_ovpn(self):
         client = RPCClient("tcp://%s:%s" % (host, port))

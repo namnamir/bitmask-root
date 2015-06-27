@@ -14,8 +14,7 @@ class BitmaskRootWindows(RPCServer, BitmaskRoot):
 
     def handle_start_ovpn_method(self,cfgfile,logfile):
         ovpn = OpenVPNLauncher()
-        ovpn.launch(cfgfile,logfile)
-        pass
+        return ovpn.launch(cfgfile,logfile)
 
     def handle_start_firewall_method(self):
         firewall = Firewall()
