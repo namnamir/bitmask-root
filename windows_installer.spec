@@ -1,10 +1,7 @@
 # -*- mode: python -*-
 a = Analysis(['windows_installer.py'],
              pathex=['C:\\Users\\Alireza\\Desktop\\bitmask-root'],
-             hiddenimports=['UserString','UserList','commands','future.backports.misc','zmq.backend.cython',
-             'zmq.backend.cython.constants','zmq.backend.cython.error','zmq.backend.cython.message','zmq.backend.cython.context',
-             'zmq.backend.cython.socket','zmq.backend.cython.utils','zmq.backend.cython._poll','zmq.backend.cython._version','zmq.backend.cython._device'
-             ],
+             hiddenimports=[],
              hookspath=None,
              runtime_hooks=None)
 pyz = PYZ(a.pure)
