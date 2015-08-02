@@ -9,4 +9,4 @@ opts = {'py2exe': {
     'includes': ['zmq.backend.cython', 'UserList', 'UserString', 'commands', 'future.backports.misc'],
 }, }
 
-setup(service=['windows_installer'], options=opts, cmdline_style='pywin32',zipfile=None)
+setup(service=['windows_installer'], options=opts, cmdline_style='pywin32', zipfile=None)
