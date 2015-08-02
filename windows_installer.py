@@ -4,7 +4,6 @@ import socket
 import win32serviceutil
 import servicemanager
 from src.leap.bitmask_root.windows.windows_implementation import *
-import sys
 
 
 class AppServerSvc(win32serviceutil.ServiceFramework):
@@ -12,6 +11,7 @@ class AppServerSvc(win32serviceutil.ServiceFramework):
     _svc_display_name_ = "Bitmask Root"
     _server = BitmaskRootWindows("tcp://%s:%s" % (host, port))
     _stoped = False
+    _ovpn_status = None
 
     def __init__(self, args):
         win32serviceutil.ServiceFramework.__init__(self, args)
@@ -39,4 +39,4 @@ class AppServerSvc(win32serviceutil.ServiceFramework):
 
 
 if __name__ == '__main__':
-        win32serviceutil.HandleCommandLine(AppServerSvc)
+    win32serviceutil.HandleCommandLine(AppServerSvc)
