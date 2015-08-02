@@ -3,7 +3,10 @@ import os
 import psutil as psutil
 
 
-class tools:
+class Tools:
+    def __init__(self):
+        pass
+
     @staticmethod
     def is_openvpn_running():
         try:
