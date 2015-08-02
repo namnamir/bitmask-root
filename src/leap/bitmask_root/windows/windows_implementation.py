@@ -6,23 +6,23 @@ from openvpn import *
 host = "127.0.0.1"
 port = "8080"
 
+
 class BitmaskRootWindows(RPCServer, BitmaskRoot):
     def handle_stop_ovpn_method(self):
         ovpn = OpenVPNLauncher()
         ovpn.terminate()
 
-
-    def handle_start_ovpn_method(self,cfgfile,logfile):
+    def handle_start_ovpn_method(self, cfgfile, logfile):
         ovpn = OpenVPNLauncher()
-        return ovpn.launch(cfgfile,logfile)
+        return ovpn.launch(cfgfile, logfile)
 
     def handle_start_firewall_method(self):
         firewall = Firewall()
-        firewall.start()
+        return firewall.start()
 
-    def handle_stop_firewall_method(self):
+    def handle_stop_firewall_method(self, getway):
         firewall = Firewall()
-        firewall.stop()
+        firewall.stop(getway)
 
 
 if __name__ == '__main__': pass
