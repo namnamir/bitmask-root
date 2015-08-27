@@ -12,7 +12,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_firewall_stop(self):
         client = RPCClient("tcp://%s:%s" % (host, port))
-        client.stop_firewall("192.168.1.1")
+        client.stop_firewall()
 
     def test_start_ovpn(self):
         client = RPCClient("tcp://%s:%s" % (host, port))
