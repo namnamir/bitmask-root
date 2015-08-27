@@ -1,3 +1,4 @@
+psutil
 PySide
 py2exe
 zmq
