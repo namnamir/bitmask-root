@@ -13,8 +13,8 @@ class OpenVPNLauncher:
         try:
             path = os.path.join(Tools.get_bitmask_home(), 'third-party', 'openvpn')
             args = [os.path.join(path, 'openvpn.exe'),
-                    "--config", os.path.join(path, cfgfile),
-                    "--log", os.path.join(path, logfile),
+                    "--config", os.path.join(path, 'ovpn', cfgfile),
+                    "--log", os.path.join(path, 'log', logfile),
                     "--management", "127.0.0.1", "7505"]
 
             self.proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -35,7 +35,6 @@ class OpenVPNLauncher:
 
     def get_status(self):
         msg = self.interface.send("state\n")
-
         if msg is not None:
             lines = string.split(msg, os.linesep)
             for l in lines:
