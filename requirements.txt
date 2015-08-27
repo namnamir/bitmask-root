@@ -1,3 +1,4 @@
+PySide
 py2exe
 zmq
 servicemanager
