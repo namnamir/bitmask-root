@@ -14,15 +14,19 @@ class BitmaskRootWindows(RPCServer, BitmaskRoot):
 
     def handle_start_ovpn_method(self, cfgfile, logfile):
         ovpn = OpenVPNLauncher()
-        return ovpn.launch(cfgfile, logfile)
+        ovpn.launch(cfgfile, logfile)
 
     def handle_start_firewall_method(self):
         firewall = Firewall()
-        return firewall.start()
+        firewall.start()
 
-    def handle_stop_firewall_method(self, getway):
+    def handle_stop_firewall_method(self):
         firewall = Firewall()
-        firewall.stop(getway)
+        firewall.stop()
+
+    def handle_test_service_method(self):
+        return True
 
 
-if __name__ == '__main__': pass
+if __name__ == '__main__':
+    pass
