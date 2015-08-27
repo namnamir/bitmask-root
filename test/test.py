@@ -21,12 +21,10 @@ class TestStringMethods(unittest.TestCase):
         while ovpn.get_status().get('ovpn_state') != "CONNECTED":
             print ovpn.get_status()
             sleep(1)
-        client.start_firewall()
 
     def test_stop_ovpn(self):
         client = RPCClient("tcp://%s:%s" % (host, port))
         client.stop_ovpn()
-
 
 
 if __name__ == '__main__':
