@@ -13,15 +13,16 @@ class OpenVPNLauncher:
         try:
             path = os.path.join(Tools.get_bitmask_home(), 'third-party', 'openvpn')
             args = [os.path.join(path, 'openvpn.exe'),
-                    "--config", os.path.join(path, 'ovpn', cfgfile),
-                    "--log", os.path.join(path, 'log', logfile),
-                    "--management", "127.0.0.1", "7505"]
+                    '--config', os.path.join(path, 'ovpn', cfgfile),
+                    '--log', os.path.join(path, 'log', logfile),
+                    '--management', '127.0.0.1', '7505']
 
             self.proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
             if self.proc.returncode:
                 raise NotImplementedError(
                     "Executing external OpenVPN process failed returning %s" % self.proc.returncode)
+
             return self.proc.pid
 
         except OSError, e:
