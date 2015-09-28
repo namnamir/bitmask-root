@@ -11,7 +11,6 @@ class AppServerSvc(win32serviceutil.ServiceFramework):
     _svc_display_name_ = "Bitmask Root"
     _server = BitmaskRootWindows("tcp://%s:%s" % (host, port))
     _stoped = False
-    _ovpn_status = None
 
     def __init__(self, args):
         win32serviceutil.ServiceFramework.__init__(self, args)
