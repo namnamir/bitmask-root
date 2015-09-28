@@ -6,7 +6,10 @@ sys.argv.append("py2exe")
 
 opts = {'py2exe': {
     'dist_dir': "dist",
-    'bundle_files': 1,
+    'dll_excludes': ['OLEAUT32.dll', 'USER32.dll', 'SHELL32.dll', 'ole32.dll', 'MSVCP90.dll',
+                     'ADVAPI32.dll', 'NETAPI32.dll', 'WS2_32.dll', 'GDI32.dll', 'VERSION.dll', 'KERNEL32.dll'],
+    'bundle_files': 2,
+    "optimize": 2,
     'includes': ['zmq.backend.cython', 'UserList', 'UserString', 'commands', 'future.backports.misc'],
 }, }
 
