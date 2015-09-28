@@ -1,4 +1,4 @@
-from time import sleep, time
+from time import sleep
 import unittest
 from jsonrpc2_zeromq import RPCClient
 from src.leap.bitmask_root.windows.windows_implementation import *
