@@ -1,5 +1,5 @@
 # bitmask-root
-Administrative service for bitmask client.
+bitmask-root is an administrative service module which helps bitmask client to work on windows as well as other operating systems.
 
 # Installation
 1- Install TAP driver for windows in third-party\tap-windows directory.<br />
@@ -18,7 +18,7 @@ windows_installer.py -start
 ```
 
 # Usage
-bitmask-root has four functionalities that you can call them as a rpc client,bitmask-root supports these functionalities:
+bitmask-root has four functionalities that you can call them as a rpc client,bitmask-root supports some functionalities such as:
 <br />
 <ul>
 <li>start_firewall</li>
