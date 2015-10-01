@@ -1,25 +1,10 @@
 import _winreg as reg
 import os
-import psutil as psutil
 
 
 class Tools:
     def __init__(self):
         pass
-
-    @staticmethod
-    def is_openvpn_running():
-        try:
-            procs = []
-            for p in list(psutil.process_iter()):
-                try:
-                    if p.name() and ('openvpn' in p.name().lower()):
-                        procs.append(p)
-                except psutil.AccessDenied as e:
-                    continue
-            return procs
-        except psutil.NoSuchProcess as e:
-            return procs
 
     @staticmethod
     def windows_has_tap_device():

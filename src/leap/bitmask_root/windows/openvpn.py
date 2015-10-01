@@ -1,5 +1,7 @@
 import string
 import subprocess
+import pythoncom
+import wmi
 from tools import *
 from management import OVPNInterface
 
@@ -29,10 +31,10 @@ class OpenVPNLauncher:
             raise NotImplementedError("OpenVPN not found")
 
     def terminate(self):
-        procs = Tools.is_openvpn_running()
-        if procs:
-            for p in procs:
-                p.terminate()
+        pythoncom.CoInitialize()
+        c = wmi.WMI()
+        for p in c.Win32_Process(name="openvpn.exe"):
+            p.Terminate()
 
     def get_status(self):
         msg = self.interface.send("state\n")
