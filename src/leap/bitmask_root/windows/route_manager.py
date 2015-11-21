@@ -3,7 +3,7 @@ import subprocess
 default_gw_filename = 'defaultgw'
 
 
-class Route:
+class RouteManager:
     def __init__(self):
         pass
 
