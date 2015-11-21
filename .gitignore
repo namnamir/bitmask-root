@@ -2,3 +2,4 @@
 *.ovpn
 dist
 build
+bitmask_client
