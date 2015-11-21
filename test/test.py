@@ -16,11 +16,11 @@ class TestStringMethods(unittest.TestCase):
 
     def test_start_ovpn(self):
         client = RPCClient("tcp://%s:%s" % (host, port))
-        client.start_ovpn('demo.bitmask.net', 'log.txt')
-        ovpn = OpenVPNLauncher()
-        while ovpn.get_status().get('ovpn_state') != "CONNECTED":
-            print ovpn.get_status()
-            sleep(1)
+        if client.start_ovpn('demo.bitmask.net', 'log.txt') == 0:
+            ovpn = OpenVPNLauncher()
+            while ovpn.get_status().get('ovpn_state') != "CONNECTED":
+                print ovpn.get_status()
+                sleep(1)
 
     def test_stop_ovpn(self):
         client = RPCClient("tcp://%s:%s" % (host, port))
