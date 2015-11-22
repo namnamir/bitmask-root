@@ -9,10 +9,11 @@ from src.leap.bitmask_root.windows.windows_implementation import *
 class AppServerSvc(win32serviceutil.ServiceFramework):
     _svc_name_ = "bitmask-root"
     _svc_display_name_ = "Bitmask Root"
-    _server = BitmaskRootWindows("tcp://%s:%s" % (host, port))
     _stoped = False
+    _server = None
 
     def __init__(self, args):
+        self._server = BitmaskRootWindows("tcp://%s:%s" % (host, port))
         win32serviceutil.ServiceFramework.__init__(self, args)
         self.hWaitStop = win32event.CreateEvent(None, 0, 0, None)
         socket.setdefaulttimeout(60)
