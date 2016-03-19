@@ -2,4 +2,6 @@ wmi
 psutil
 py2exe
 zmq
-servicemanager
+pypiwin32
+jsonrpc2-zeromq
+
