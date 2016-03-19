@@ -1,11 +1,8 @@
 import os
 from distutils.core import setup
 import py2exe
-import sys
 import zmq.libzmq
 from py2exe.build_exe import Target
-
-sys.argv.append('py2exe')
 
 service = Target(
     description="Administrative service for bitmask client",

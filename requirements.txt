@@ -4,4 +4,3 @@ py2exe
 zmq
 pypiwin32
 jsonrpc2-zeromq
-
