@@ -1,14 +1,14 @@
 import win32service
 import win32event
-import socket
 import win32serviceutil
 import servicemanager
 from src.leap.bitmask_root.windows.windows_implementation import *
 
 
-class AppServerSvc(win32serviceutil.ServiceFramework):
+class WinInstaller(win32serviceutil.ServiceFramework):
     _svc_name_ = "bitmask-root"
     _svc_display_name_ = "Bitmask Root"
+    _svc_description_ = "Administrative service for bitmask client"
     _stoped = False
     _server = None
 
@@ -16,7 +16,6 @@ class AppServerSvc(win32serviceutil.ServiceFramework):
         self._server = BitmaskRootWindows("tcp://%s:%s" % (host, port))
         win32serviceutil.ServiceFramework.__init__(self, args)
         self.hWaitStop = win32event.CreateEvent(None, 0, 0, None)
-        socket.setdefaulttimeout(60)
 
     def SvcStop(self):
         self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
@@ -39,4 +38,4 @@ class AppServerSvc(win32serviceutil.ServiceFramework):
 
 
 if __name__ == '__main__':
-    win32serviceutil.HandleCommandLine(AppServerSvc)
+    win32serviceutil.HandleCommandLine(WinInstaller)
