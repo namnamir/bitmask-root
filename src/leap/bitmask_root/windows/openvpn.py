@@ -13,10 +13,9 @@ class OpenVPNLauncher:
 
     def launch(self, config, log):
         try:
-            path = os.path.join(Tools.get_bitmask_home(), 'third-party', 'openvpn')
-            args = [os.path.join(path, 'openvpn.exe'),
-                    '--config', os.path.join(path, 'ovpn', config),
-                    '--log', os.path.join(path, 'log', log),
+            args = ['openvpn',
+                    '--config', config,
+                    '--log', log,
                     '--management', '127.0.0.1', '7505']
 
             self.proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)

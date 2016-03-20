@@ -1,5 +1,6 @@
 import _winreg as reg
 import os
+import subprocess
 
 
 class Tools:
@@ -26,5 +27,9 @@ class Tools:
         return False
 
     @staticmethod
-    def get_bitmask_home():
-        return os.getenv('BITMASK_HOME', "")
+    def is_ovpn_installed():
+        try:
+            cmd = subprocess.Popen('openvpn')
+            return bool(cmd.communicate())
+        except OSError:
+            return False
