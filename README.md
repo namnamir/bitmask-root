@@ -2,29 +2,29 @@
 bitmask-root is an administrative service module which helps bitmask client to work on windows as well as other operating systems.
 
 # Installation
-1- Install TAP driver for windows in third-party\tap-windows directory.<br />
-2- Copy .ovpn config file to third-party\openvpn.<br />
-3- Add an environment variable named BITMASK_HOME and save bitmask-root directory as its value.<br />
-4- Install windows service by following command (Run command prompt as administrator): <br />
+First of all generate binaries and third parties, to do this simply run buildexe.py then you'll see dist and third-party directories
+which contain executable win32 files.
+Install Openvpn and TAP driver which has been downloaded by buildexe.py in third-party directory.
+Install windows service by following command (Run command prompt as administrator): <br />
 
 ```batch
-windows_installer.py -install
+windows_installer.exe install
 ```
 
 5- Then start windows service:<br />
 
 ```batch
-windows_installer.py -start
+windows_installer.exe start
 ```
 
 # Usage
-bitmask-root has four functionalities that you can call them as a rpc client. bitmask-root supports some functionalities such as:
+bitmask-root has four important functionalities which you can call them as a rpc client:
 <br />
 <ul>
-<li>start_firewall</li>
-<li>stop_firewall</li>
-<li>start_openvpn</li>
-<li>stop_openvpn</li>
+<li>start_firewall()</li>
+<li>stop_firewall()</li>
+<li>start_openvpn(certificate path,log path)</li>
+<li>stop_openvpn()</li>
 </ul>
 
 # Example
