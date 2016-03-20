@@ -3,8 +3,7 @@ bitmask-root is an administrative service module which helps bitmask client to w
 
 # Installation
 First of all generate binaries and third parties, to do this simply run buildexe.py then you'll see dist and third-party directories
-which contain executable win32 files.<br/>
-Install Openvpn and TUN/TAP driver which have been downloaded by buildexe.py in third-party directory.<br/>
+which contain executable win32 files. Install Openvpn and TUN/TAP driver which have been downloaded by buildexe.py in third-party directory.<br/>
 Install windows service by following command (Run command prompt as administrator): <br />
 
 ```batch
