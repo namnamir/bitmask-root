@@ -19,9 +19,9 @@ windows_installer.exe start
 bitmask-root has four important functionalities which you can call them as a rpc client:
 <br />
 <ul>
+<li>start_openvpn(certificate path,log path)</li>
 <li>start_firewall()</li>
 <li>stop_firewall()</li>
-<li>start_openvpn(certificate path,log path)</li>
 <li>stop_openvpn()</li>
 </ul>
 
