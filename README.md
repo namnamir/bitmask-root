@@ -27,7 +27,7 @@ bitmask-root has four important functionalities which you can call them as a rpc
 
 # Example
 ```python
-client = RPCClient("tcp://%s:%s" % (127.0.0.1, 8080))
+client = RPCClient("tcp://%s:%s" % ("127.0.0.1", "8080"))
 client.start_firewall()
 ```
 
